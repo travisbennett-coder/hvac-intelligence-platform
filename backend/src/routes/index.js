@@ -1,4 +1,5 @@
 import express from 'express';
+import dashboardRouter from './dashboard.js';
 import systemsRouter from './systems.js';
 import thermostatsRouter from './thermostats.js';
 import checklistRouter from './checklist.js';
@@ -11,6 +12,7 @@ import scorecardRouter from './scorecard.js';
 
 const router = express.Router();
 
+router.use('/dashboard', dashboardRouter);
 router.use('/systems', systemsRouter);
 router.use('/thermostats', thermostatsRouter);
 router.use('/maintenance/checklists', checklistRouter);
