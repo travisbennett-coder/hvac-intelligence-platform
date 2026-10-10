@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "HVAC Intelligence",
+    "slug": "hvac-intelligence",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0C1015"
+      }
+    }
+  }
+}
