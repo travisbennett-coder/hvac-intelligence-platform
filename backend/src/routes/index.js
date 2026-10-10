@@ -1,15 +1,24 @@
 import express from 'express';
-
-import contractorRoutes from './routes/contractors.js';
-import customerRoutes from './routes/customers.js';
-import maintenanceRoutes from './routes/maintenance.js';
-import analyticsRoutes from './routes/analytics.js';
+import systemsRouter from './systems.js';
+import thermostatsRouter from './thermostats.js';
+import checklistRouter from './checklist.js';
+import couponRouter from './coupons.js';
+import rebatesRouter from './rebates.js';
+import schedulingRouter from './scheduling.js';
+import onboardingRouter from './onboarding.js';
+import customerLifecycleRouter from './customerLifecycle.js';
+import scorecardRouter from './scorecard.js';
 
 const router = express.Router();
 
-router.use('/contractors', contractorRoutes);
-router.use('/customers', customerRoutes);
-router.use('/maintenance', maintenanceRoutes);
-router.use('/analytics', analyticsRoutes);
+router.use('/systems', systemsRouter);
+router.use('/thermostats', thermostatsRouter);
+router.use('/maintenance/checklists', checklistRouter);
+router.use('/coupons', couponRouter);
+router.use('/rebates', rebatesRouter);
+router.use('/scheduling', schedulingRouter);
+router.use('/onboarding', onboardingRouter);
+router.use('/customers', customerLifecycleRouter);
+router.use('/scorecard', scorecardRouter);
 
 export default router;
